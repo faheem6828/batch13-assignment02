@@ -1,0 +1,16 @@
+:root{
+  --color-1: 
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+nav{
+  height: 60px;
+  background-color: #1A0B2E;
+  color: white;
+
+}
+nav h1 span{
+  color: linear-gradient(90deg, #FF5F6D, #FFC371);
+}
