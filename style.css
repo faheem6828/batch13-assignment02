@@ -358,152 +358,114 @@ a {
   grid-column: span 1.5;
 }
 
-/* Episodes */
-.fe-section {
-  padding: 70px 0 40px;
-  background: radial-gradient(
-    1200px 700px at 50% 10%,
-    #2a0f45 0%,
-    #12061f 60%,
-    #0c0416 100%
-  );
-}
-
-.fe-wrap {
-  width: min(1100px, calc(100% - 40px));
-  margin: 0 auto;
-}
-
-.fe-title {
-  text-align: center;
-  color: #fff;
-  font-size: 44px;
-  font-weight: 800;
-  margin: 0 0 34px;
-}
-
-.fe-grid {
+/* --- EPIC TALKS SECTION --- */
+.epic-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 30px;
+  margin-top: 40px;
 }
 
-.fe-card {
-  border-radius: 22px;
+.epic-card {
+ 
+  background: linear-gradient(to bottom, #2a1547, #1a0b2e);
+  border: 1px solid #3a2557; 
+  border-radius: 16px;
   overflow: hidden;
-  background: rgba(42, 15, 69, 0.55);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.45);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
 }
 
-.fe-media {
-  display: block;
+
+.epic-card:hover {
+  border-color: var(--green);
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+
+.epic-video-wrap {
   position: relative;
-  height: 180px;
-  overflow: hidden;
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: #000;
 }
 
-.fe-thumb {
+.epic-video-wrap iframe {
   position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  transform: scale(1.02);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
-.fe-media::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.06),
-    rgba(0, 0, 0, 0.22)
-  );
+.epic-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
-.fe-play {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 54px;
-  height: 54px;
-  border-radius: 999px;
-  z-index: 2;
-  background: url("./assets/hero-circle.png") center/cover no-repeat;
-  box-shadow: 0 18px 45px rgba(255, 45, 183, 0.25);
-}
-
-.fe-play::after {
-  content: "";
-  position: absolute;
-  left: 52%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 0;
-  height: 0;
-  border-left: 12px solid #fff;
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
-  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.35));
-}
-
-.fe-body {
-  padding: 18px 18px 20px;
-}
-
-.fe-h {
-  margin: 0 0 10px;
-  color: #fff;
-  font-size: 24px;
+.epic-title {
+  margin: 0 0 12px 0;
+  font-size: 18px;
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.4;
+  color: var(--white);
 }
 
-.fe-p {
-  margin: 0 0 14px;
-  font-size: 16px;
-  line-height: 1.65;
-  color: rgba(255, 255, 255, 0.55);
+.epic-desc {
+  margin: 0 0 20px 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted); 
+  flex-grow: 1;
 }
 
-.fe-time {
+.epic-footer {
+  margin-top: auto;
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 16px;
+}
+
+.epic-badge {
   font-size: 13px;
-  font-weight: 600;
-  color: rgba(180, 255, 220, 0.95);
+  font-weight: 700;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.fe-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  background: #27ff7a;
-  box-shadow: 0 10px 25px rgba(39, 255, 122, 0.25);
+.epic-time {
+  font-size: 13px;
+  color: var(--muted2);
 }
 
-.fe-media:hover .fe-thumb {
-  transform: scale(1.06);
-  transition: 0.35s ease;
-}
-.fe-media:hover .fe-play {
-  transform: translate(-50%, -50%) scale(1.06);
-  transition: 0.25s ease;
-}
+/* --- RESPONSIVENESS --- */
 
-/* responsive */
-@media (max-width: 900px) {
-  .fe-title {
-    font-size: 34px;
+
+@media (max-width: 992px) {
+  .epic-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
-  .fe-grid {
+}
+
+
+@media (max-width: 600px) {
+  .epic-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
-  .fe-media {
-    height: 200px;
+  
+  .epic-card:hover {
+    transform: scale(1.02); 
   }
 }
 
