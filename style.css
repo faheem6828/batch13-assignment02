@@ -195,7 +195,7 @@ a {
 }
 
 .hero-title {
-  margin: 10px 0 6px;
+  margin: 30px 0 10px;
   font-size: 48px;
   font-weight: 800;
   color: #fff;
@@ -272,7 +272,7 @@ a {
     height: 80%;
     margin: 0 auto;
   }
-  .hero-section{
+  .hero-section {
     height: 50vh;
   }
 }
@@ -365,6 +365,9 @@ a {
 }
 
 /* --- EPIC TALKS SECTION --- */
+.epic-section {
+  margin: 60px auto;
+}
 .epic-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -373,9 +376,8 @@ a {
 }
 
 .epic-card {
- 
   background: linear-gradient(to bottom, #2a1547, #1a0b2e);
-  border: 1px solid #3a2557; 
+  border: 1px solid #3a2557;
   border-radius: 16px;
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -383,14 +385,12 @@ a {
   flex-direction: column;
 }
 
-
 .epic-card:hover {
   border-color: var(--green);
   transform: scale(1.05);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
   z-index: 10;
 }
-
 
 .epic-video {
   position: relative;
@@ -427,7 +427,7 @@ a {
   margin: 0 0 20px 0;
   font-size: 14px;
   line-height: 1.6;
-  color: var(--muted); 
+  color: var(--muted);
   flex-grow: 1;
 }
 
@@ -455,7 +455,6 @@ a {
 
 /* --- RESPONSIVENESS --- */
 
-
 @media (max-width: 992px) {
   .epic-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -463,15 +462,14 @@ a {
   }
 }
 
-
 @media (max-width: 600px) {
   .epic-grid {
     grid-template-columns: 1fr;
     gap: 24px;
   }
-  
+
   .epic-card:hover {
-    transform: scale(1.02); 
+    transform: scale(1.02);
   }
 }
 
